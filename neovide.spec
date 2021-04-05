@@ -19,8 +19,8 @@ BuildRequires:  expat-devel
 BuildRequires:  freetype-devel
 BuildRequires:  mesa-vulkan-devel
 BuildRequires:  libXext-devel
-BuildRequires:  openssl-dev
-BuildRequires:  SDL2-dev
+BuildRequires:  openssl-devel
+BuildRequires:  SDL2-devel
 # TODO: Required?
 # BuildRequires:  vulkan-loader-devel
 # BuildRequires:  vulkan-headers
