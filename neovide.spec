@@ -49,7 +49,8 @@ cargo build --release
 
 
 %install
-install -p -m 755 'target/release/neovide' "%{buildroot}%{_bindir}/neovide"
+install --mode=755 --directory "%{buildroot}%{_bindir}"
+install --mode=755 'target/release/neovide' "%{buildroot}%{_bindir}/neovide"
 desktop-file-install --dir="%{buildroot}%{_datadir}/applications" \
     'assets/neovide.desktop'
 
