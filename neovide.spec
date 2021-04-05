@@ -43,7 +43,7 @@ cargo build --release
 
 
 %install
-install -p -m 755 'target/release/neovide' "%{buildroot}${_bindir}/neovide"
+install -p -m 755 'target/release/neovide' "%{buildroot}%{_bindir}/neovide"
 desktop-file-install --dir="%{buildroot}%{_datadir}/applications" \
     'assets/neovide.desktop'
 
@@ -51,7 +51,7 @@ desktop-file-install --dir="%{buildroot}%{_datadir}/applications" \
 %files
 %license LICENSE
 %{_bindir}/neovide
-${_datadir}/applications/neovide.desktop
+%{_datadir}/applications/neovide.desktop
 
 
 %changelog
