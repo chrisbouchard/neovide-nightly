@@ -21,6 +21,7 @@ pushd neovide
     fi
 
     git archive \
+        --prefix="neovide-$version/" \
         --format=tar.gz \
         --output='../neovide.tar.gz' \
         HEAD
