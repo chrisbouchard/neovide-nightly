@@ -10,7 +10,7 @@ git clone 'https://github.com/chrisbouchard/neovide-nightly.git'
 pushd neovide
 
     main_description="$(git describe --tags HEAD)"
-    main_description="${description//-/ }"
+    main_description="${main_description//-/ }"
     read main_tag main_commits main_hash <<<"$main_description"
 
     if [ -n "$main_commits" ] && [ -n "$main_hash" ]
