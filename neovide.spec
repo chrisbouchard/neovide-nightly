@@ -35,7 +35,7 @@ some graphical improvements, but it should act functionally like the terminal
 UI.
 
 %prep
-%autosetup
+%setup
 
 
 %build
