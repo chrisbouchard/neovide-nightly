@@ -21,12 +21,18 @@ BuildRequires:  freetype-devel
 BuildRequires:  libXext-devel
 BuildRequires:  mesa-vulkan-devel
 BuildRequires:  openssl-devel
-# TODO: Required?
-# BuildRequires:  vulkan-loader-devel
-# BuildRequires:  vulkan-headers
 
+# Base
 Requires:       google-noto-sans-mono-fonts
 Requires:       neovim >= 0.4.0
+
+# Libraries
+Requires:       SDL2
+Requires:       expat
+Requires:       freetype
+Requires:       libXext
+Requires:       mesa-vulkan
+Requires:       openssl
 
 %description
 
