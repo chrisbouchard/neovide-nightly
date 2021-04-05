@@ -19,8 +19,8 @@ BuildRequires:  SDL2-devel
 BuildRequires:  expat-devel
 BuildRequires:  freetype-devel
 BuildRequires:  libXext-devel
-BuildRequires:  mesa-vulkan-devel
 BuildRequires:  openssl-devel
+BuildRequires:  vulkan-devel
 
 # Base
 Requires:       google-noto-sans-mono-fonts
@@ -31,8 +31,8 @@ Requires:       SDL2
 Requires:       expat
 Requires:       freetype
 Requires:       libXext
-Requires:       mesa-vulkan
 Requires:       openssl
+Requires:       vulkan
 
 %description
 
