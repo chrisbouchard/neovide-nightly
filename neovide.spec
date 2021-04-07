@@ -1,3 +1,10 @@
+# Directory where the application icon will be installed
+%global xdg_icon_dir %{_datadir}/icons/hicolor/scalable/apps
+
+# Directory where the desktop entry will be installed
+%global xdg_application_dir %{_datadir}/applications
+
+
 Name:           neovide
 Version:        {{version}}
 Release:        {{release}}%{?dist}
@@ -6,6 +13,7 @@ Summary:        No Nonsense Neovim Client in Rust
 License:        MIT
 URL:            https://github.com/Kethku/neovide
 Source0:        neovide.tar.gz
+Source1:        neovide.svg
 
 # Tools
 BuildRequires:  cargo
@@ -51,14 +59,20 @@ cargo build --release
 %install
 install --mode=755 --directory "%{buildroot}%{_bindir}"
 install --mode=755 'target/release/neovide' "%{buildroot}%{_bindir}/neovide"
-desktop-file-install --dir="%{buildroot}%{_datadir}/applications" \
+
+install --mode=755 --directory "%{buildroot}%{xdg_icon_dir}"
+install --mode=644 "%{SOURCE1}" "%{buildroot}%{xdg_icon_dir}/neovide.svg"
+
+install --mode=755 --directory "%{buildroot}%{xdg_application_dir}"
+desktop-file-install --dir="%{buildroot}%{xdg_application_dir}" \
     'assets/neovide.desktop'
 
 
 %files
 %license LICENSE
 %{_bindir}/neovide
-%{_datadir}/applications/neovide.desktop
+%{xdg_icon_dir}/neovide.svg
+%{xdg_application_dir}/neovide.desktop
 
 
 %changelog
