@@ -34,9 +34,15 @@ pushd neovide-nightly
 
 popd
 
+# Copy the RPM spec out and do some simple text replacement to patch in dynamic
+# values.
 cat 'neovide-nightly/neovide.spec' \
     | sed "s/{{build_date}}/$build_date/" \
     | sed "s/{{release}}/$release/" \
     | sed "s/{{version}}/$version/" \
     >'neovide.spec'
+
+# Copy the temporary application icon out so we can include it as a source in
+# our RPM spec.
+cp 'neovide-nightly/neovide.svg' 'neovide.svg'
 
