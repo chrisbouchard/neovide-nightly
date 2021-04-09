@@ -45,7 +45,3 @@ cat 'neovide-nightly/neovide.spec' \
     | sed "s/{{version}}/$version/" \
     >'neovide.spec'
 
-# Copy the temporary application icon out so we can include it as a source in
-# our RPM spec.
-cp 'neovide-nightly/neovide.svg' 'neovide.svg'
-

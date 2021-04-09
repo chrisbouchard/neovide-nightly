@@ -13,7 +13,6 @@ Summary:        No Nonsense Neovim Client in Rust
 License:        MIT
 URL:            https://github.com/Kethku/neovide
 Source0:        neovide.tar.gz
-Source1:        neovide.svg
 
 # Tools
 BuildRequires:  cargo
@@ -61,7 +60,7 @@ install --mode=755 --directory "%{buildroot}%{_bindir}"
 install --mode=755 'target/release/neovide' "%{buildroot}%{_bindir}/neovide"
 
 install --mode=755 --directory "%{buildroot}%{xdg_icon_dir}"
-install --mode=644 "%{SOURCE1}" "%{buildroot}%{xdg_icon_dir}/neovide.svg"
+install --mode=644 'assets/neovide.svg' "%{buildroot}%{xdg_icon_dir}/neovide.svg"
 
 install --mode=755 --directory "%{buildroot}%{xdg_application_dir}"
 desktop-file-install --dir="%{buildroot}%{xdg_application_dir}" \
