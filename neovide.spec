@@ -24,6 +24,7 @@ BuildRequires:  gcc-c++
 # Libraries
 BuildRequires:  SDL2-devel
 BuildRequires:  expat-devel
+BuildRequires:  fontconfig-devel
 BuildRequires:  freetype-devel
 BuildRequires:  libXext-devel
 BuildRequires:  openssl-devel
@@ -36,6 +37,7 @@ Requires:       neovim >= 0.4.0
 # Libraries
 Requires:       SDL2
 Requires:       expat
+Requires:       fontconfig
 Requires:       freetype
 Requires:       libXext
 Requires:       openssl
