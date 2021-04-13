@@ -54,7 +54,7 @@ UI.
 
 
 %build
-cargo build --release
+cargo build --release --verbose
 
 
 %install
