@@ -12,7 +12,7 @@ Build script and RPM spec for a nightly build of [Neovide][neovide]
 ## Installation
 
 This package is available from the
-[chrisbouchard/neovide-nightly][neovide-nightly-project] COPR. Assuming
+[chrisbouchard/neovide-nightly][neovide-nightly-project] Copr. Assuming
 you're using a recent version of Fedora or CentOS, you can install using `dnf`.
 
 ```console
