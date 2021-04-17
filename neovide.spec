@@ -15,7 +15,7 @@ Summary:        No Nonsense Neovim Client in Rust
 
 License:        MIT
 URL:            https://github.com/Kethku/neovide
-Source0:        neovide-%{build_version}.tar.gz
+Source0:        neovide.tar.gz
 
 # Tools
 BuildRequires:  cargo
