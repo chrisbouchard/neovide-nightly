@@ -7,8 +7,8 @@ set -eux -o errtrace
 
 copr edit-package-custom \
     --name neovide \
-    --script build.sh \
-    --script-builddeps 'bash git' \
+    --script bootstrap.sh \
+    --script-builddeps 'bash curl git' \
     --script-chroot fedora-latest-x86_64 \
     --webhook-rebuild on \
     neovide-nightly
