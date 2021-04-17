@@ -12,16 +12,22 @@ git clone 'https://github.com/chrisbouchard/neovide-nightly.git'
 
 pushd neovide
 
-    main_description="$(git describe --tags HEAD)"
-    main_description="${main_description//-/ }"
-    read main_tag main_commits main_hash <<<"$main_description"
+    # The result here should be similar to parsing `git describe --tags HEAD`,
+    # except we don't have to worry about string parsing. The results of `git
+    # describe` are ambiguous if the tag name contains any dashes.
 
-    if [ -n "$main_commits" ] && [ -n "$main_hash" ]
-    then
-        version="$main_tag~dev.$main_commits.$main_hash"
-    else
-        version="$main_tag"
-    fi
+    main_tag=$(git describe --abbrev=0 --tags HEAD)
+    main_commits=$(git rev-list --count "$main_tag..HEAD")
+    main_hash=$(git rev-parse --short HEAD)
+
+    # If the tag does contain any dashes, we need to remove them because RPM
+    # uses dash to separate the version and release.
+    safe_main_tag="${main_tag//-/.}"
+
+    # Note that we insert a "g" before the hash, just like `git describe` does.
+    # This is for backwards compatibility with our older versioning scheme that
+    # did use `git describe`.
+    version="$safe_main_tag~dev.$main_commits.g$main_hash"
 
     git archive \
         --prefix="neovide-$version/" \
