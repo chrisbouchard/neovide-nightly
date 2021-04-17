@@ -39,6 +39,8 @@ popd
 
 pushd neovide-nightly
 
+    # We're not tagging in ths project, so we'll just count the total number of
+    # commits as the revision.
     release="$(git rev-list --count HEAD)"
 
 popd
