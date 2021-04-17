@@ -39,15 +39,15 @@ project.
 The RPM's version is based on the result of `git describe --tags HEAD` for the
 Neovide project. It will be something like `0.7.0~dev.13.gd8d6f4e`, where
 
-    * `0.7.0` is the last Neovide tag,
-    * `13` is the number of commits on `main` since that tag, and
-    * `d8d6f4e` is the `HEAD` commit (with a `g` prefix indicating it's a git
-      project)
+* `0.7.0` is the last Neovide tag,
+* `13` is the number of commits on `main` since that tag, and
+* `d8d6f4e` is the `HEAD` commit (with a `g` prefix indicating it's a git
+  project)
 
 The revision will be something like `24.fc34.x86_64`, where
 
-    * `24` is the number of commits on the `main` branch in this project and
-    * `fc34.x86_64` is the standard dist tag (OS version and architecture)
+* `24` is the number of commits on the `main` branch in this project and
+* `fc34.x86_64` is the standard dist tag (OS version and architecture)
 
 Right now (as of April 2021), I'm building for Fedora 32&ndash;34 on x86-64,
 mostly because those are the OS versions and architecture I needed. If I do add
