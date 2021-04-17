@@ -6,13 +6,16 @@
 
 
 Name:           neovide
-Version:        {{version}}
-Release:        {{release}}%{?dist}
+Version:        %{build_version}
+Release:        %{build_release}
 Summary:        No Nonsense Neovim Client in Rust
 
 License:        MIT
 URL:            https://github.com/Kethku/neovide
-Source0:        neovide.tar.gz
+Source0:        neovide-%{build_version}.tar.gz
+Source1:        build-macros.inc
+
+%include %{SOURCE1}
 
 # Tools
 BuildRequires:  cargo
@@ -77,5 +80,5 @@ desktop-file-install --dir="%{buildroot}%{xdg_application_dir}" \
 
 
 %changelog
-* {{build_date}} Chris Bouchard <chris@upliftinglemma.net>
+* %{build_date} Chris Bouchard <chris@upliftinglemma.net>
 - Nightly build from git main
