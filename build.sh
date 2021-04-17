@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# The latest copy of this build script is available at:
-#     https://raw.githubusercontent.com/chrisbouchard/neovide-nightly/main/build.sh
-
 set -eux -o errtrace
 
 build_date="$(date +'%a %b %d %Y')"
