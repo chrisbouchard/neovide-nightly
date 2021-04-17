@@ -2,7 +2,7 @@
 
 set -eux -o errtrace
 
-build_date="$(date +'%a %b %d %Y')"
+build_date="$(date +'%a %b %d %Y %H:%M')"
 
 git clone 'https://github.com/Kethku/neovide.git'
 git clone 'https://github.com/chrisbouchard/neovide-nightly.git'
