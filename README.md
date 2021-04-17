@@ -32,11 +32,13 @@ binary RPMs for various OS targets.
 
 I have a server set up using
 [chrisbouchard/copr-nightly-trigger][copr-nightly-trigger] to trigger a build
-every night around midnight EST. The Copr project is also configured to rebuild
-whenever I push a new commit to this project.
+every night around midnight EST. ~~The Copr project is also configured to
+rebuild whenever I push a new commit to this project.~~ (This is not currently
+working.)
 
-The RPM's version is based on the result of `git describe --tags HEAD` for the
-Neovide project. It will be something like `0.7.0~dev.13.gd8d6f4e`, where
+The RPM's version is similar to (but not the same as) running `git describe
+--tags HEAD` in the Neovide project. It will be something like
+`0.7.0~dev.13.gd8d6f4e`, where
 
 * `0.7.0` is the last Neovide tag,
 * `13` is the number of commits on `main` since that tag, and
