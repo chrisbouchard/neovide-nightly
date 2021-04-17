@@ -85,5 +85,5 @@ desktop-file-install --dir="%{buildroot}%{xdg_application_dir}" \
 
 
 %changelog
-* %{build_date} Chris Bouchard <chris@upliftinglemma.net>
+* %{build_timestamp} Chris Bouchard <chris@upliftinglemma.net>
 - Nightly build from git main

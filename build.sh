@@ -2,7 +2,7 @@
 
 set -eux -o errtrace
 
-build_date="$(date +'%a %b %d %Y %H:%M')"
+build_timestamp="$(date +'%a %b %d %T %Z %Y')"
 
 git clone 'https://github.com/Kethku/neovide.git'
 git clone 'https://github.com/chrisbouchard/neovide-nightly.git'
@@ -47,8 +47,8 @@ popd
 
 # Create a companion spec file with some build-related macros.
 cat >build-macros.inc <<EOF
-%global build_date $build_date
 %global build_release $release
+%global build_timestamp $build_timestamp
 %global build_version $version
 EOF
 
